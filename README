@@ -1,0 +1,39 @@
+Euristica evaluate1 nu tine cont de vieti (=> nu reprezinta victoriile reale
+ale concurentilor), ci masoara mancarea acumulata (20pct pe mancare) in
+conditiile in care cea mai apropiata mancare nu e foarta departata si 
+pacman nu e amenintat de fantome (cea mai apropiata fantoma e departe).
+Am considerat ca pacman castiga daca acest scor obtinut este > 0 si pierde
+daca < 0, fiind remiza in cazul = 0.
+Testele in ordine crescatoare a complexitatii lor sunt:
+*) fin2.txt: pacman e foarte aproape de mancare si e normal ca primul
+jucator (pacman) sa castige
+
+ VS         | MC   | MC MINIMAX| MINIMAX | RANDOM |
+------------|------|-----------|---------|--------|
+ MC         |  5/0 |    5/0    |   5/0   |   5/0  |
+ MC MINIMAX |  5/0 |    5/0    |   5/0   |   5/0  |
+ MINIMAX    |  5/0 |    5/0    |   5/0   |   5/0  |
+ RANDOM     |  4/1 |    5/0    |   3/1   |   4/1  |
+ 
+ *) fin1.txt: victoria lui pacman este evidenta pentru un observator uman
+ dar un agent trebuie sa aiba capacitatea de a vedea lantul de 6 mutari
+ (pana la cea mai apropiata mancare)
+
+  VS         | MC   | MC MINIMAX| MINIMAX | RANDOM |
+------------|------|-----------|---------|--------|
+ MC         |  2/3 |    5/0    |   5/0   |   4/1  |
+ MC MINIMAX |  5/0 |    5/0    |   5/0   |   5/0  |
+ MINIMAX    |  5/0 |    5/0    |   5/0   |   5/0  |
+ RANDOM     |  0/5 |    0/5    |   0/5   |   2/3  |
+ 
+ *) fin0.txt: cea mai apropiata mancare se afla la 12 mutari, deci este
+ nevoie de un buget de cel putin 24 de mutari pentru a fi siguri ca
+ pacman castiga. Cum a fost folosit un buget de doar 12, pacman nu a
+ castigat in nicio situatie
+ 
+ VS         | MC   | MC MINIMAX| MINIMAX | RANDOM |
+------------|------|-----------|---------|--------|
+ MC         |  0/5 |    0/5    |   0/5   |   0/5  |
+ MC MINIMAX |  0/5 |    0/5    |   0/5   |   0/5  |
+ MINIMAX    |  0/5 |    0/5    |   0/5   |   0/5  |
+ RANDOM     |  0/5 |    0/5    |   0/5   |   0/5  |

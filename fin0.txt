@@ -1,0 +1,16 @@
+15 17
+_____X_X_X_X_____
+_XXX____P____XXX_
+_M_X_XXX_XXX_X__M
+_X_X___F_____X_X_
+_____X_X_X_X_____
+_XXX_________XXX_
+_X___XXX_XXX___X_
+_XXX__M___M__XXX_
+_X___XXX_XXX___X_
+_XXX_________XXX_
+_____X_X_X_X__F__
+_X_X____M_M__X_X_
+___X_XXX_XXX_X___
+_XXX_________XXX_
+_M___X_X_X_X_M___
